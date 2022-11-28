@@ -2,7 +2,6 @@
 # $2 is the directory in which to download
 # $3 is the destination of the unzipped files
 
-
 declare -a satellite_data_one
 declare -a satellite_data_two
 
