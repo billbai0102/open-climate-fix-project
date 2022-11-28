@@ -10,15 +10,15 @@ satellite_data_two=(https://huggingface.co/datasets/openclimatefix/eumetsat-rss/
 
 if [ $1 -eq 2021]
 then
-    for file in ${satellite_data_one[@]}
+    for url in ${satellite_data_one[@]}
         do
-            wget -P $2 $file
+            wget -P /home/areel_khan_career/data/satellite/2021/zipped $url
             unzip $2/$file -d $3
     done
 else
-    for file in ${satellite_data_two[@]}
+    for url in ${satellite_data_two[@]}
         do
-            wget -P $2 $file
+            wget -P $2 $url
             unzip $2/$file -d $3
     done
 fi
